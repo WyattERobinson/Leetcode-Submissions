@@ -1,15 +1,7 @@
 class Solution {
 public:
     int romanToInt(string s) {
-        map<char, int> nums;
-        nums['I'] = 1;
-        nums['V'] = 5;
-        nums['X'] = 10;
-        nums['L'] = 50;
-        nums['C'] = 100;
-        nums['D'] = 500;
-        nums['M'] = 1000;
-
+        map<char, int> nums = {{'I', 1}, {'V', 5}, {'X', 10}, {'L', 50}, {'C', 100}, {'D', 500}, {'M', 1000}};
         int size = s.size();
         int result = 0;
 
