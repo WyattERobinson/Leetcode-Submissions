@@ -4,3 +4,6 @@ I'm not super knowledgeable on being optimal, or all the intricasies of the lang
 This is just a way for me to document my progress and understanding with languages and coding... genres(?) which will probably be helpful sometime probably maybe hopefully.
 
 I'm practicing C++, so pretty much everything here should be in that language.
+
+Also, shouold be noted that Time and Memory are not consistent with time or memory complexity. The same program ran multiple times will often result in it being anywhere from the top 1%-90%. 
+While it's a nifty metric to keep track of, it's not reliable and a solve should normally not be judged entirely on these metrics.
