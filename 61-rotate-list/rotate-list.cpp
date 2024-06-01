@@ -20,32 +20,36 @@ public:
 
         ListNode* cur = head;
         ListNode* prev = nullptr;
+        ListNode* tail = nullptr;
         ListNode* newHead = nullptr;
-        int size = 0;
+        int size = 1;
 
-        // Get size of list
-        while (cur) {
+        // Get size of list, track tail
+        while (cur->next) {
             size++;
             cur = cur->next;
         }
+        tail = cur;
 
+        // We can only rotate n times, where n is the list size - 1
+        // If k == size, then there's no rotation
         int rotate = k % size;
         if (rotate == 0) {
             return head;
         }
         
+        // Place cur at the new head and prev... one previous
         cur = head;
         for (int i = 0; i < size - rotate; i++) {
             prev = cur;
             cur = cur->next;
         }
-
+        
+        // Make cur the new head pointer
+        // connect the tail to the original head
         prev->next = nullptr;
         newHead = cur;
-        while (cur->next) {
-            cur = cur->next;
-        }
-        cur->next = head;
+        tail->next = head;
 
         return newHead;
     }
